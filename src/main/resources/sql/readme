@@ -1,0 +1,6 @@
+1. Запустить сервер MySQL
+2. Открыть MySQL Command Line Client ввести пароль
+C:\PROJECTS\PROJECT_TRAFFIC\traffic\src\main\resources\sql\script_created_db.sql
+3. Выполнить команду: source 'полный путь до файла'.
+Пример:
+    source C:\PROJECTS\PROJECT_TRAFFIC\traffic\src\main\resources\sql\script_created_db.sql

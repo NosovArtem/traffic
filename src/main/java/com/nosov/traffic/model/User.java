@@ -1,5 +1,7 @@
 package com.nosov.traffic.model;
 
+import com.sun.istack.internal.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +13,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "EMAIL")
+    @NotNull
+    @Column(name = "EMAIL", unique = true)
     private String email;
 
     @Column(name = "FIRST_NAME")
