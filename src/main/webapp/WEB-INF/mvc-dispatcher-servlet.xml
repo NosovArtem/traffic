@@ -30,6 +30,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.nosov.traffic.model.User</value>
+                <value>com.nosov.traffic.model.UserTraffic</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -48,6 +49,14 @@
 
     <bean id="userService" class="com.nosov.traffic.service.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="userTrafficDao" class="com.nosov.traffic.dao.repository.UserTrafficDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="userTrafficService" class="com.nosov.traffic.service.UserTrafficServiceImpl">
+        <property name="userTrafficDao" ref="userTrafficDao"/>
     </bean>
 
     <context:component-scan base-package="com.nosov.traffic"/>
