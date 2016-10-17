@@ -65,7 +65,7 @@
         </tr>
         <c:forEach items="${listUsers}" var="user">
             <tr>
-                <td>${user.id}</td>
+                <td><a href="/usertraffic/${user.id}" target="_blank">${user.id}</a></td>
                 <td>${user.email}</td>
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
