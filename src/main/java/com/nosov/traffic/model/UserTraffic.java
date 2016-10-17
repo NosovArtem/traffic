@@ -1,6 +1,5 @@
 package com.nosov.traffic.model;
 
-import com.nosov.traffic.model.User;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.Column;
@@ -17,7 +16,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "USER_TRAFFIC")
-public class Traffic {
+public class UserTraffic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
