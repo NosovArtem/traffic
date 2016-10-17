@@ -1,0 +1,6 @@
+Должен быть установлен и настроен "Bower"
+https://github.com/bower/bower
+
+1) Запустить командную строку
+2) Попасть в папку :     cd  src\main\webapp\resources
+3) Выполнить команду :   bower i

@@ -1,0 +1,9 @@
+{
+  "name": "TrafficManager",
+  "description": "Lib for webapp Traffic Manager",
+  "dependencies": {
+
+    "eonasdan-bootstrap-datetimepicker": "4.17.42",
+    "bootstrap": "3.3.7"
+  }
+}
