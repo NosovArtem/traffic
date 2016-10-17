@@ -14,7 +14,7 @@ create table users(
 create table user_traffic (
   id_user_traffic int NOT NULL AUTO_INCREMENT,
   id_user int NOT NULL,
-  date_traffic date,
+  date_traffic datetime,
   uplink_traffic char(255),
   downlink_traffic char(255),
   PRIMARY KEY (id_user_traffic),
@@ -30,5 +30,10 @@ INSERT INTO users (id_user, first_name, last_name, email) VALUES
 
 INSERT INTO user_traffic (id_user_traffic, id_user, date_traffic, uplink_traffic, downlink_traffic) VALUES
 (1,2,'2011-04-11','10','20'),
-(2,3,'2011-04-11','10','20'),
-(3,5,'2011-04-11','10','20');
+(2,2,'2011-04-12','10','20'),
+(3,2,'2011-04-13','10','20'),
+(4,2,'2011-04-14','10','20'),
+(5,3,'2011-04-11','10','20'),
+(6,3,'2011-04-11','10','20'),
+(7,5,'2011-04-11','10','20'),
+(8,5,'2011-04-11','10','20');
