@@ -18,13 +18,13 @@ public class UserTrafficDTO {
     @NotNull
     private User user;
 
-    private Integer dateStart;
+    private Date dateStart;
 
     private Date dateEnd;
 
-    private String uplink;
+    private Boolean uplink;
 
-    private  String downlink;
+    private  Boolean downlink;
 
     public User getUser() {
         return user;
@@ -34,11 +34,11 @@ public class UserTrafficDTO {
         this.user = user;
     }
 
-    public Integer getDateStart() {
+    public Date getDateStart() {
         return dateStart;
     }
 
-    public void setDateStart(Integer dateStart) {
+    public void setDateStart(Date dateStart) {
         this.dateStart = dateStart;
     }
 
@@ -50,19 +50,19 @@ public class UserTrafficDTO {
         this.dateEnd = dateEnd;
     }
 
-    public String getUplink() {
+    public Boolean getUplink() {
         return uplink;
     }
 
-    public void setUplink(String uplink) {
+    public void setUplink(Boolean uplink) {
         this.uplink = uplink;
     }
 
-    public String getDownlink() {
+    public Boolean getDownlink() {
         return downlink;
     }
 
-    public void setDownlink(String downlink) {
+    public void setDownlink(Boolean downlink) {
         this.downlink = downlink;
     }
 }

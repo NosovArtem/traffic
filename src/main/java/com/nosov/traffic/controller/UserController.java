@@ -25,12 +25,4 @@ public class UserController {
         return "users";
     }
 
-    @RequestMapping(value = "usertraffic", method = RequestMethod.GET)
-    public String userTraffic(Model model){
-        model.addAttribute("user", new User());
-        model.addAttribute("listUsers", this.userService.listUsers());
-
-        return "usertraffic";
-    }
-
 }
