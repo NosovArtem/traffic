@@ -13,13 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class UserController {
 
+    @Autowired
     private UserService userService;
 
-    @Autowired(required = true)
-    @Qualifier(value = "userService")
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
 
     @RequestMapping(value = "users", method = RequestMethod.GET)
     public String listBooks(Model model){
@@ -37,10 +33,4 @@ public class UserController {
         return "usertraffic";
     }
 
-    @RequestMapping("userdata/{id}")
-    public String bookData(@PathVariable("id") int id, Model model){
-        model.addAttribute("user", this.userService.getUserById(id));
-
-        return "userdata";
-    }
 }
