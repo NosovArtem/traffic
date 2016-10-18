@@ -3,6 +3,7 @@ package com.nosov.traffic.dao.repository;
 
 import com.nosov.traffic.model.User;
 import com.nosov.traffic.model.UserTraffic;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -26,9 +27,13 @@ public class UserTrafficDaoImpl implements UserTrafficDao {
     public List<UserTraffic> listUsers(int userId)// TODO: 13.10.2016 set параметр в запрос
     // https://www.tutorialspoint.com/hibernate/hibernate_query_language.htm
     // Using Named Paramters
+            /*Метод будет возвращать лист ограниченный параметрами id, date_start, date_end, uplink\download*/
     {
         Session session = sessionFactory.getCurrentSession();
-        List<UserTraffic> userTrafficList = session.createQuery("FROM UserTraffic ut WHERE ut.user.id =" + userId).list();
+        String hql = "FROM UserTraffic ut WHERE ut.user.id = :userId";
+        Query query = session.createQuery(hql);
+        query.setParameter("userId",userId);
+        List<UserTraffic> userTrafficList = query.list();
 
         for(UserTraffic userTraffic: userTrafficList){
             logger.info("User list: " + userTraffic);
